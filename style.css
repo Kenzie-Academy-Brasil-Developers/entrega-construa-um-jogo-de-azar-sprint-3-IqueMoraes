@@ -1,0 +1,236 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
+
+html{
+    font-family: 'Georama', sans-serif;
+
+    background-image: url(./imgs/luck.png);
+    background-size: 80%;
+    background-repeat: repeat;
+}
+
+.maos{
+    width: 5rem;
+    height: fit-content;
+    cursor: pointer;
+    background-color: #d9ba39;
+    padding: 5px 0;
+    margin: 3px 0;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(150, 22, 8);
+    font-weight: bold;
+}
+
+section, div, aside{
+    box-sizing: border-box;
+}
+
+#oJogo{
+    display: flex;
+    justify-content: space-between;
+}
+#oJogo p{
+    text-align: center;
+}
+
+#mesaDeJogo {
+    width: 70vw;
+    height: 100vh;
+    padding: 3vh 0;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#mesaDeJogo div{
+    width: 40vw;
+    height: 40vw;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.857);
+    text-align: center;
+    border: 3px solid rgb(252, 165, 52);
+    box-shadow: 0px 0px 22px 7px rgba(255, 214, 81, 0.789);
+
+    border-radius: 20%;
+}
+.maoNaMesa{
+    width: 30vw;
+}
+#maoJogador{
+    margin: 0;
+}
+#maoRakku{
+    margin: 0;
+}
+.nomeMao {
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(4, 1, 29);
+    padding: 3px;
+}
+
+.tituloMao{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: white;
+    padding: 2.5vw 0;
+}
+.tituloRakku{
+    box-shadow: 0px 0px 22px 0px rgba(18, 165, 233, 0.789);
+    color: rgba(18, 165, 233);
+}
+.tituloJogador{
+    box-shadow: 0px 0px 22px 0px rgba(233, 68, 18, 0.789);
+    color: rgba(233, 68, 18);
+}
+
+#oJogo aside{
+    width: 30vw;
+    height: 100vh;
+    padding: 5vh 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(150, 22, 8);
+}
+
+#opcoesJogador{
+    display: flex;
+    flex-direction: column;
+}
+#contagemDePartidas{
+    width: 97.5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* #contagemDePartidas figure{
+    box-sizing: border-box;
+}
+#contagemDePartidas img{
+    height: 12vw;
+} */
+#botaoReiniciar{
+    color: #d9ba39;
+    background-color: rgb(0, 0, 0, 0);
+    border: 2px solid #d9ba39;
+    border-radius: 20px;
+}
+
+.resultados {
+    color: #d9ba39;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (min-width:1024px) {
+
+    html{
+        background-image: url(./imgs/luck.png);
+        background-size: 20%;
+        background-repeat: repeat;
+    }
+
+    #oJogo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #mesaDeJogo{
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100vw;
+        height: 70vh;
+    }
+    #mesaDeJogo div{
+        width: 26vw;
+        height: 26vw;
+    }
+    .maoNaMesa{
+        width: 20vw;
+    }
+    /* #maoJogador{
+        margin-right: 10vw;
+    }
+    #maoRakku{
+        margin-left: 10vw;
+    } */
+
+
+    #oJogo aside{
+        flex-direction: row-reverse;
+        align-items: baseline;
+        width: 100vw;
+        height: 30vh;
+    }
+    aside p{
+        font-size: 20px;
+    }
+
+    #opcoesJogador{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .tituloMao{
+        width: 25vw;
+    }
+    .maos{
+        width: 5rem;
+        height: 5rem;
+        line-height: 4rem;
+        padding: 5px 5px;
+        margin: 3px 10px;
+
+        text-align: center;
+       
+    }
+}
